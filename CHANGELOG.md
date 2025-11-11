@@ -1,5 +1,15 @@
 # @rodrinrj/design-system
 
+## 1.1.0
+
+### Minor Changes
+
+- 73aa122: add react app example
+
+### Patch Changes
+
+- 9b998a3: fix storybook deployment
+
 ## 1.0.0
 
 ### Major Changes
