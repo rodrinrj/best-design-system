@@ -1,5 +1,11 @@
 # @rodrinrj/design-system
 
+## 0.1.2
+
+### Patch Changes
+
+- 8ad15c1: fix publishing action
+
 ## 0.1.1
 
 ### Patch Changes
