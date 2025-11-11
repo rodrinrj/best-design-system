@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Text } from './Text';
+import Text from './Text';
 
 const meta = {
   title: 'Design System/Text',
@@ -37,6 +37,9 @@ const meta = {
       >
         The brown fox jumps over the lazy dog
       </Text>
+      <br />
+      <br />
+      <Text {...args} />
     </>
   ),
 } satisfies Meta<typeof Text>;

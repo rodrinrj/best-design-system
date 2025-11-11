@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "allowImportingTsExtensions": false,
+    "outDir": "./dist/native",
+    "lib": ["ESNext"],
+    "declaration": false,
+    "declarationMap": false,
+    "module": "ESNext",
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "moduleResolution": "Bundler",
+    "skipLibCheck": true
+  },
+  "include": ["lib/**/*.native.ts", "lib/**/*.native.tsx", "lib/**/index.native.ts"]
+}
