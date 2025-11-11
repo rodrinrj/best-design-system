@@ -1,22 +1,20 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
-import TOKENS from '../tokens';
-
-export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
-  color?: keyof (typeof TOKENS)['colors'];
-  size?: keyof (typeof TOKENS)['sizes'];
-}
+import { type Tokens } from '../tokens';
+import { useTheme } from '../theme';
+import type { AllowedVariant, HeadingProps } from './Heading';
 
 export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
   ({ color = 'primary', size = 'medium', ...rest }, ref) => {
-    const styles = createStyles({ color, size, ...rest });
+    const { theme } = useTheme();
+    const styles = createStyles(theme, color, size);
     const variants = {
       large: 1,
       medium: 2,
       small: 3,
     };
 
-    const Tag = `h${variants[size]}` as keyof Pick<React.JSX.IntrinsicElements, 'h1' | 'h2' | 'h3'>;
+    const Tag = `h${variants[size]}` as AllowedVariant;
     return (
       <Text>
         <Tag
@@ -31,10 +29,10 @@ export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
 
 Heading.displayName = 'Heading';
 
-const createStyles = ({ color, size }: Pick<Required<HeadingProps>, 'color' | 'size'>) =>
+const createStyles = (theme: Tokens, color: keyof Tokens['colors'], size: keyof Tokens['sizes']) =>
   StyleSheet.create({
     text: {
-      color: TOKENS.colors[color],
-      fontSize: TOKENS.sizes[size],
+      color: theme.colors[color],
+      fontSize: theme.sizes[size],
     },
   });

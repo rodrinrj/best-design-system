@@ -1,4 +1,20 @@
-export const TOKENS = {
+export type Tokens = {
+  colors: {
+    primary: string;
+    secondary: string;
+    accent: string;
+  };
+  sizes: {
+    small: number;
+    medium: number;
+    large: number;
+  };
+  typography: {
+    family: string;
+  };
+};
+
+export const baseTheme: Tokens = {
   colors: {
     primary: '#282828',
     secondary: '#757575',
@@ -14,4 +30,10 @@ export const TOKENS = {
   },
 } as const;
 
-export default TOKENS;
+export const darkTheme: Tokens = {
+  ...baseTheme,
+  colors: {
+    ...baseTheme.colors,
+    primary: '#ffffff',
+  },
+} as const;

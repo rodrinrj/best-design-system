@@ -1,10 +1,12 @@
-import type { Preview } from '@storybook/react';
-import '../lib/global.css';
+import { ReactRenderer, type Preview } from '@storybook/react-vite';
+import { withThemeFromJSXProvider } from '@storybook/addon-themes';
+
+import { ThemeProvider } from '../lib/theme';
+import { baseTheme, darkTheme } from '../lib/tokens';
 
 const preview: Preview = {
   tags: ['autodocs'],
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -12,6 +14,16 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    withThemeFromJSXProvider<ReactRenderer>({
+      themes: {
+        light: baseTheme,
+        dark: darkTheme,
+      },
+      defaultTheme: 'light',
+      Provider: ThemeProvider,
+    }),
+  ],
 };
 
 export default preview;

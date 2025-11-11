@@ -10,13 +10,36 @@ The components in this library can be tried and tested in [Github Pages](https:/
 ### Use
 
 On your React or React Native project, run `pnpm install @rodrinrj/design-system -` to then import any component:
+_For simplicity in this demo, this library is only published to Github Packages and not npm, so this requires additional config_
+
+Inside the App root:
 
 ```typescript
-import { Text } from '@fintual/design-system'
+import { ThemeProvider, Themes } from '@rodrinrj/design-system';
 
-...
-    <Text>This is some great cross-compatible text!</Text>
-...
+export function App(props) {
+  return (
+    <ThemeProvider theme={Themes.LIGHT}>
+      {props.children}
+    </ThemeProvider>
+  )
+};
+```
+
+This provides to you the `useTheme()` hook to use inside your components, allowing you to access the current theme and switch it.
+
+```typescript
+import { Text, useTheme } from '@fintual/design-system';
+
+function MyComponent(props) {
+  const { theme, setTheme } = useTheme();
+
+  return (
+    <Text>
+      This is some great cross-compatible text!
+    </Text>
+  );
+}
 ```
 
 ### Contribute
@@ -48,6 +71,20 @@ When publishing changes, i.e., merging a PR that aims at the main branch, a PR w
   - [x] Text component
   - [x] Heading compoent
   - [ ] Monospaced component
+  - [x] Add support for themes
+
+## Things I would do in the future for a real library
+
+- Improve CI/CD
+  - Publish the library to the correct registry (npm, private, etc)
+  - Push the coverage on build and enforce minimum percentage of testing
+  - Add e2e tests for interactive components with Storybook
+- Improve theming
+  - Add variants for components that usually require them (e.g., buttons)
+  - Extend the ThemeProvider to check the user system and act accordingly, e.g, save the theme in localStorage for web users
+  - Allow extensible themes (brand themes, system specific, etc)
+- Improve documentation
+  - Add example pages on Storybook on how to mix elements
 
 ## Scripts
 
