@@ -17,7 +17,7 @@ const compat = new FlatCompat({
 });
 
 export default defineConfig([
-  globalIgnores(['**/dist', '**/storybook-static', '**/coverage']),
+  globalIgnores(['**/dist', '**/dist-native', '**/storybook-static', '**/coverage', '**/examples']),
   {
     extends: fixupConfigRules(
       compat.extends(

@@ -3,12 +3,13 @@
 _This is a demo project to apply to Fintual_
 
 Best ever standarized design system library for Fintual, ment to work out-of-the-box with React and React Native projects.
+The components in this library can be tried and tested in [Github Pages](https://rodrinrj.github.io/best-design-system/)
 
 ## How to...
 
 ### Use
 
-On your React or React Native project, run `pnpm install @fintual/design-system` to then import any component:
+On your React or React Native project, run `pnpm install @rodrinrj/design-system -` to then import any component:
 
 ```typescript
 import { Text } from '@fintual/design-system'
@@ -35,17 +36,18 @@ When publishing changes, i.e., merging a PR that aims at the main branch, a PR w
 
 ## To-do
 
-1. [x] Setup project to start developing components
-   1. [x] Configure pnpm, Typescript, Vite and other tooling
-   2. [x] Configure Storybook
-   3. [x] Configure Github Actions
-   4. [ ] Make library cross-compatible with React and React Native
-   5. [x] Write README
-2. [ ] Implement library code
-   1. [ ] Define Tokens and Variants
-   2. [x] Text component
-   3. [ ] Heading compoent
-   4. [ ] Monospaced component
+- [x] Setup project to start developing components
+  - [x] Configure pnpm, Typescript, Vite and other tooling
+  - [x] Configure Storybook
+  - [x] Configure Github Actions
+  - [x] Write README
+  - [x] Make library cross-compatible with React and React Native
+  - [x] Add project examples on how to use the library
+- [ ] Implement library code
+  - [x] Define Tokens and Variants
+  - [x] Text component
+  - [ ] Heading compoent
+  - [ ] Monospaced component
 
 ## Scripts
 
