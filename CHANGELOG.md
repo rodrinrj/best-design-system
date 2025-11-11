@@ -1,0 +1,10 @@
+# @rodrinrj/design-system
+
+## 0.1.0
+
+### Minor Changes
+
+- e39b925: Setup Storybook with GH Action deployment
+- e39b925: Implement Text component
+- e39b925: Setup changesets with GH Action publishing
+- e39b925: Setup pre-commit with Husky
