@@ -1,5 +1,11 @@
 # @rodrinrj/design-system
 
+## 0.2.1
+
+### Patch Changes
+
+- 6bf1682: fix package contents
+
 ## 0.2.0
 
 ### Minor Changes
