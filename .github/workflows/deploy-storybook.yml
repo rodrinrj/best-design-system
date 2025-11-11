@@ -1,7 +1,7 @@
 name: Deploy Storybook to Pages
 
 on:
-  release:
+  registry_package:
     types: [published]
   workflow_dispatch:
 

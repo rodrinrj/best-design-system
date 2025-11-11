@@ -10,6 +10,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 permissions:
   contents: write
   pull-requests: write
+  packages: write
 
 jobs:
   publish:
@@ -31,12 +32,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Create Release PR #and Publish
+      - name: Create Release PR and Publish
         uses: changesets/action@v1
         with:
           title: 'Update versions'
           commit: 'chore: update versions'
-          # publish: pnpm ci:publish
+          publish: pnpm ci:publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

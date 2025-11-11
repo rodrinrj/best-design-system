@@ -6,6 +6,9 @@
   "author": "Rodrigo Naranjo <@rodrinrj>",
   "license": "MIT",
   "packageManager": "pnpm@10.21.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "type": "module",
   "files": [
     "dist"
