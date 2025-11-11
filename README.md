@@ -31,7 +31,7 @@ Requirements: Node v25.1.0
 
 ### Publish
 
-To-do
+When publishing changes, i.e., merging a PR that aims at the main branch, a PR will be created to update the versions using changesets. When this secondary PR is merged, a new package should be automatically published to Github Packages. You should avoid manual publishing.
 
 ## To-do
 
@@ -40,7 +40,7 @@ To-do
    2. [x] Configure Storybook
    3. [x] Configure Github Actions
    4. [ ] Make library cross-compatible with React and React Native
-   5. [-] Write README
+   5. [x] Write README
 2. [ ] Implement library code
    1. [ ] Define Tokens and Variants
    2. [x] Text component
