@@ -1,5 +1,20 @@
 # @rodrinrj/design-system
 
+## 1.0.0
+
+### Major Changes
+
+- 540b485: base library with theme support
+
+### Minor Changes
+
+- 204a5f4: add heading component
+
+### Patch Changes
+
+- 030c695: update docs and exports
+- 6b18f11: fix text exports
+
 ## 0.2.1
 
 ### Patch Changes
