@@ -67,7 +67,7 @@ When publishing changes, i.e., merging a PR that aims at the main branch, a PR w
   - [x] Write README
   - [x] Make library cross-compatible with React and React Native
   - [x] Add project examples on how to use the library
-  - [ ] Add examples for React
+  - [x] Add examples for React
   - [ ] Add examples for React Native
 - [ ] Implement library code
   - [x] Define Tokens and Variants
