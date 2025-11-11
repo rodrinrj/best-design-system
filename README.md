@@ -49,9 +49,10 @@ Requirements: Node v25.1.0
 1. Clone this repository
 2. Run `nvm use` (if needed)
 3. Run `pnpm install`
-4. Create your component inside `lib/`, with appropriate testing and Storybook documentation
-5. When done, update the version with `pnpm changeset`
-6. Commit your changes with an appropriate message and create a PR to be reviewed
+4. Create your component inside `lib/` with a native version if necessary, i.e., your component needs a native-specific primitive
+5. Add appropirate testing and documentation to your component
+6. When done, update the version with `pnpm changeset`
+7. Commit your changes with an appropriate message and create a PR to be reviewed
 
 ### Publish
 
@@ -66,6 +67,8 @@ When publishing changes, i.e., merging a PR that aims at the main branch, a PR w
   - [x] Write README
   - [x] Make library cross-compatible with React and React Native
   - [x] Add project examples on how to use the library
+  - [ ] Add examples for React
+  - [ ] Add examples for React Native
 - [ ] Implement library code
   - [x] Define Tokens and Variants
   - [x] Text component
@@ -75,6 +78,11 @@ When publishing changes, i.e., merging a PR that aims at the main branch, a PR w
 
 ## Things I would do in the future for a real library
 
+- Improve library code
+  - Add more components
+  - Add more tests
+  - Add styles (maybe tailwind) for more complex components
+  - Add variants instead of one-by-one settings for easier use on complex combinations
 - Improve CI/CD
   - Publish the library to the correct registry (npm, private, etc)
   - Push the coverage on build and enforce minimum percentage of testing
@@ -85,16 +93,22 @@ When publishing changes, i.e., merging a PR that aims at the main branch, a PR w
   - Allow extensible themes (brand themes, system specific, etc)
 - Improve documentation
   - Add example pages on Storybook on how to mix elements
+  - Fix Storybook's dark theme (for now, it only changes the component's styles)
 
 ## Scripts
+
+_This is not a complete list_
 
 - `dev`: Starts the local Storybook server, use this to develop and preview your components.
 - `test`: Runs all your tests with vitest.
 - `test:watch`: Runs tests in watch mode.
-- `build`: Builds your Storybook as a static web application.
-- `build:lib`: Builds your component library with Vite.
+- `build:storybook`: Builds your Storybook as a static web application.
+- `build:web`: Builds your component library for web.
+- `build:native`: Builds your component library for mobile.
+- `build`: Builds for all systems.
 - `lint`: Runs ESLint.
 - `format`: Formats your code with Prettier.
+- `clean`: Removes dist folders.
 
 ## License
 
