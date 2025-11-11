@@ -1,5 +1,11 @@
 # @rodrinrj/design-system
 
+## 0.1.1
+
+### Patch Changes
+
+- 9030b23: publish new versions to github packages
+
 ## 0.1.0
 
 ### Minor Changes
