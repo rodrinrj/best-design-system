@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { expect, it } from 'vitest';
-import Text from './Text';
+import { Text } from './Text';
 
 it('should render a text element', () => {
   // arrange

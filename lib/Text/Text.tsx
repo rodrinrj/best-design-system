@@ -6,7 +6,7 @@ export interface TextProps extends React.HTMLAttributes<HTMLSpanElement> {
   size?: keyof (typeof TOKENS)['sizes'];
 }
 
-const Text = React.forwardRef<HTMLSpanElement, TextProps>(
+export const Text = React.forwardRef<HTMLSpanElement, TextProps>(
   ({ color = 'primary', size = 'medium', ...rest }, ref) => (
     <span
       ref={ref}
@@ -21,4 +21,3 @@ const Text = React.forwardRef<HTMLSpanElement, TextProps>(
 );
 
 Text.displayName = 'Text';
-export default Text;
