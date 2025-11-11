@@ -1,5 +1,15 @@
 # @rodrinrj/design-system
 
+## 0.2.0
+
+### Minor Changes
+
+- 7546a02: add support for react native
+
+### Patch Changes
+
+- dd35c50: fix storybook action
+
 ## 0.1.2
 
 ### Patch Changes
