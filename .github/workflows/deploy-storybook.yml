@@ -1,8 +1,8 @@
 name: Deploy Storybook to Pages
 
 on:
-  registry_package:
-    types: [published]
+  pull_request:
+    types: [closed]
   workflow_dispatch:
 
 permissions:
@@ -15,12 +15,15 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  check_and_deploy:
     name: Deploy Storybook
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    if: |
+      github.event.pull_request.merged == true &&
+      contains(github.event.pull_request.labels.*.name, 'version-update')
     steps:
       - name: Checkout code
         uses: actions/checkout@v5

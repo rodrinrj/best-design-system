@@ -87,6 +87,7 @@ When publishing changes, i.e., merging a PR that aims at the main branch, a PR w
   - Publish the library to the correct registry (npm, private, etc)
   - Push the coverage on build and enforce minimum percentage of testing
   - Add e2e tests for interactive components with Storybook
+  - Automate changeset PR labeling to fully automate Storybook deployment
 - Improve theming
   - Add variants for components that usually require them (e.g., buttons)
   - Extend the ThemeProvider to check the user system and act accordingly, e.g, save the theme in localStorage for web users
