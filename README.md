@@ -46,7 +46,7 @@ When publishing changes, i.e., merging a PR that aims at the main branch, a PR w
 - [ ] Implement library code
   - [x] Define Tokens and Variants
   - [x] Text component
-  - [ ] Heading compoent
+  - [x] Heading compoent
   - [ ] Monospaced component
 
 ## Scripts

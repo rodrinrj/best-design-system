@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Text } from './Text';
+import { Heading } from './Heading';
 
 const meta = {
-  title: 'Design System/Text',
-  component: Text,
+  title: 'Design System/Heading',
+  component: Heading,
   argTypes: {
     color: {
       options: ['primary', 'secondary', 'accent'],
@@ -17,53 +17,52 @@ const meta = {
   },
   render: (args) => (
     <>
-      <Text
+      <Heading
         {...args}
         size="large"
       >
         The brown fox jumps over the lazy dog
-      </Text>
+      </Heading>
       <br />
-      <Text
+      <Heading
         {...args}
         size="medium"
       >
         The brown fox jumps over the lazy dog
-      </Text>
+      </Heading>
       <br />
-      <Text
+      <Heading
         {...args}
         size="small"
       >
         The brown fox jumps over the lazy dog
-      </Text>
+      </Heading>
     </>
   ),
-} satisfies Meta<typeof Text>;
+} satisfies Meta<typeof Heading>;
 
 export default meta;
 
-type Story = StoryObj<typeof Text>;
+type Story = StoryObj<typeof Heading>;
 
 export const Example: Story = {
   render: (args) => (
     <>
-      <Text size="large">This text is for the most important part of the message</Text>
-      <br />
-      <Text size="medium">
-        With a <Text color="accent">highlighted</Text> follow-up
-      </Text>
-      <br />
-      <Text
+      <Heading size="large">Heading example</Heading>
+      <Heading
+        size="medium"
+        color="accent"
+      >
+        This is a great example of hierarchy
+      </Heading>
+      <Heading
         size="small"
         color="secondary"
       >
         And a little more info
-      </Text>
+      </Heading>
       <br />
-      <br />
-      <br />
-      <Text {...args}>Modify controls to see the text change</Text>
+      <Heading {...args}>Modify the controls to see the text change</Heading>
     </>
   ),
 };

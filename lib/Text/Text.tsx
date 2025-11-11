@@ -16,7 +16,7 @@ export const Text = React.forwardRef<HTMLSpanElement, TextProps>(
         fontFamily: TOKENS.typography.family,
       }}
       {...rest}
-    ></span>
+    />
   ),
 );
 
