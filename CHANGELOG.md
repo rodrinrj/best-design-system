@@ -1,5 +1,12 @@
 # @rodrinrj/design-system
 
+## 0.1.2
+
+### Patch Changes
+
+- 489775e: fix publishing action
+- 489775e: fix publish action again
+
 ## 0.1.1
 
 ### Patch Changes
