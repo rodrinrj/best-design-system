@@ -20,8 +20,8 @@ importers:
         specifier: ^7.1.8
         version: 7.1.20(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
       '@rodrinrj/design-system':
-        specifier: ^1.1.0
-        version: 1.1.0(react-dom@19.1.0(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
+        specifier: ^1.2.0
+        version: 1.2.0(react-dom@19.1.0(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
       expo:
         specifier: ~54.0.25
         version: 54.0.25(@babel/core@7.28.5)(@expo/metro-runtime@6.1.2)(expo-router@6.0.15)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)
@@ -1828,11 +1828,11 @@ packages:
         integrity: sha512-pxipMW/iEBSUrjxz2cDD7fNwkqR4xoi0E/PcfTQGCcdJwLoaxzab5kSadBLj1MTJyT0YRrOXL9umHpXtp+Dv4w==,
       }
 
-  '@rodrinrj/design-system@1.1.0':
+  '@rodrinrj/design-system@1.2.0':
     resolution:
       {
-        integrity: sha512-xtT7iRUbSF7NXLmeEq2/bpf1mLJJP0+w1TALheWmxUEc9tJ7vige++v4e1bLXZcz7ADRgYq/N/MxvFi+79Rfig==,
-        tarball: https://npm.pkg.github.com/download/@rodrinrj/design-system/1.1.0/140a7bb29d5e273ffcebb10f84074685cb202d85,
+        integrity: sha512-ShYne+8HoL71723jpm6a8k5rRxrDgKWH9TJtOHWNRTXt3YeLHCVp3dZlJ++aiiLG0jfMgK+CjMau1utqnDQo2Q==,
+        tarball: https://npm.pkg.github.com/download/@rodrinrj/design-system/1.2.0/ea6cde7bde225e681c8380e3fed38d67a2c98f2d,
       }
     peerDependencies:
       react: ^19.0.0
@@ -3114,10 +3114,10 @@ packages:
         integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==,
       }
 
-  electron-to-chromium@1.5.257:
+  electron-to-chromium@1.5.258:
     resolution:
       {
-        integrity: sha512-VNSOB6JZan5IQNMqaurYpZC4bDPXcvKlUwVD/ztMeVD7SwOpMYGOY7dgt+4lNiIHIpvv/FdULnZKqKEy2KcuHQ==,
+        integrity: sha512-rHUggNV5jKQ0sSdWwlaRDkFc3/rRJIVnOSe9yR4zrR07m3ZxhP4N27Hlg8VeJGGYgFTxK5NqDmWI4DSH72vIJg==,
       }
 
   emoji-regex@8.0.0:
@@ -8578,7 +8578,7 @@ snapshots:
     dependencies:
       nanoid: 3.3.11
 
-  '@rodrinrj/design-system@1.1.0(react-dom@19.1.0(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)':
+  '@rodrinrj/design-system@1.2.0(react-dom@19.1.0(react@19.1.0))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.17)(react@19.1.0))(react@19.1.0)':
     dependencies:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
@@ -9140,7 +9140,7 @@ snapshots:
     dependencies:
       baseline-browser-mapping: 2.8.29
       caniuse-lite: 1.0.30001756
-      electron-to-chromium: 1.5.257
+      electron-to-chromium: 1.5.258
       node-releases: 2.0.27
       update-browserslist-db: 1.1.4(browserslist@4.28.0)
 
@@ -9402,7 +9402,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  electron-to-chromium@1.5.257: {}
+  electron-to-chromium@1.5.258: {}
 
   emoji-regex@8.0.0: {}
 

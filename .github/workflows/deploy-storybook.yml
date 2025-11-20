@@ -2,8 +2,9 @@ name: Deploy Storybook
 run-name: Deploy Storybook to Pages
 
 on:
-  pull_request:
-    types: [closed]
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -16,20 +17,17 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  check-and-deploy:
+  deploy:
     name: Deploy Storybook
+    if: contains(github.event.head_commit.message, 'update versions (#')
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    if: |
-      github.event.pull_request.merged == true &&
-      contains(github.event.pull_request.labels.*.name, 'version-update')
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
-        with:
-          ref: 'main'
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4

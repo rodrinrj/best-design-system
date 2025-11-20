@@ -1,4 +1,5 @@
-name: Publish
+name: Publish library
+run-name: Publish library to Github
 
 on:
   push:

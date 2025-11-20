@@ -24,9 +24,10 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <Text>
-          Edit <Text color="accent">app/(tabs)/index.tsx</Text> to see changes. Press{' '}
+        <Text color="accent">Step 1: Try it</Text>
+        <ThemedText>
+          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
+          Press{' '}
           <ThemedText type="defaultSemiBold">
             {Platform.select({
               ios: 'cmd + d',
@@ -35,7 +36,7 @@ export default function HomeScreen() {
             })}
           </ThemedText>{' '}
           to open developer tools.
-        </Text>
+        </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <Link href="/modal">
