@@ -1,5 +1,16 @@
 # @rodrinrj/design-system
 
+## 1.2.0
+
+### Minor Changes
+
+- 12df148: add react-native example
+
+### Patch Changes
+
+- 12df148: fix import path for react native
+- 12df148: check correct branch in pages deploy
+
 ## 1.1.0
 
 ### Minor Changes
