@@ -1,5 +1,11 @@
 # @rodrinrj/design-system
 
+## 1.2.1
+
+### Patch Changes
+
+- fdd9d32: remove css imports
+
 ## 1.2.0
 
 ### Minor Changes
