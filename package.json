@@ -20,9 +20,10 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "react-native": "./dist-native/index.native.js",
   "exports": {
     ".": {
-      "react-native": "./dist-native/index.js",
+      "react-native": "./dist-native/index.native.js",
       "import": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
@@ -32,7 +33,10 @@
         "default": "./dist/index.cjs"
       }
     },
-    "./css": "./dist/style.css"
+    "./*": {
+      "react-native": "./dist-native/*",
+      "default": "./dist/*"
+    }
   },
   "scripts": {
     "dev": "storybook dev -p 6006",

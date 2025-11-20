@@ -1,4 +1,5 @@
-name: Deploy Storybook to Pages
+name: Deploy Storybook
+run-name: Deploy Storybook to Pages
 
 on:
   pull_request:
@@ -15,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  check_and_deploy:
+  check-and-deploy:
     name: Deploy Storybook
     environment:
       name: github-pages
@@ -27,6 +28,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
+        with:
+          ref: 'main'
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
